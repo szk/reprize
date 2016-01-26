@@ -1,0 +1,29 @@
+Import('re_env')
+
+obj = re_env.SharedObject(source=['Util.cpp',
+                                  'mt19937ar-cok.c',
+                                  'glpng/glpng.c',
+                                  'tinyxml/tinystr.cpp',
+                                  'tinyxml/tinyxml.cpp',
+                                  'tinyxml/tinyxmlerror.cpp',
+                                  'tinyxml/tinyxmlparser.cpp',
+                                  'nvtristrip/NvTriStrip.cpp',
+                                  'nvtristrip/NvTriStripObjects.cpp',
+                                  'libtess/dict.c',
+                                  'libtess/geom.c',
+                                  'libtess/memalloc.c',
+                                  'libtess/mesh.c',
+                                  'libtess/normal.c',
+#                                   'libtess/priorityq-heap.c',
+                                  'libtess/priorityq.c',
+                                  'libtess/render.c',
+                                  'libtess/sweep.c',
+                                  'libtess/tess.c',
+                                  'libtess/tessmono.c',
+                                  'spectrl/solpos.c',
+                                  'spectrl/spectrl2_2.c'])
+
+# SConscript(dirs=['spheretree'])
+
+Return('obj')
+

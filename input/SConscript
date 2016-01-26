@@ -1,0 +1,8 @@
+Import('re_env')
+obj = re_env.SharedObject(source=['Input.cpp',
+                                  'XEvMouse.cpp',
+                                  'XEvBase.cpp',
+                                  'XEvOptIO.cpp',
+                                  'XEvKeyboard.cpp'])
+
+Return('obj')

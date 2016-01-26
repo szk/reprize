@@ -1,0 +1,7 @@
+Import('re_env')
+obj = re_env.SharedObject(source=['MemHunk.cpp',
+                                  'Timer.cpp',
+                                  'UNIXDevice.cpp',
+                                  'X11Device.cpp'])
+
+Return('obj')

@@ -1,0 +1,18 @@
+Import('re_env')
+src_list = ['MakeStrip.cpp', 'Video.cpp']
+
+conf = Configure(re_env)
+# OpenGL
+if conf.CheckLibWithHeader('GL', 'GL/gl.h', 'c++', 'glGetString(GL_EXTENSIONS);'):
+    conf.env.Append(CXXFLAGS='-DOPENGL')
+    src_list.append(['GLRenderer.cpp', 'GLX11Screen.cpp'])
+
+# FreeType2
+# if conf.CheckLibWithHeader('freetype', 'ft2build.h', 'c++', 'glGetString(GL_EXTENSIONS);'):
+#     src_list.append(['GLRenderer.cpp', 'GLX11Screen.cpp'])
+
+re_env = conf.Finish()
+
+obj = re_env.SharedObject(src_list)
+
+Return('obj')

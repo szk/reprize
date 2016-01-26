@@ -1,0 +1,8 @@
+Import('re_env')
+obj = re_env.SharedObject(source=['Interface.cpp',
+                                  'Avatar.cpp',
+                                  'Desktop.cpp',
+                                  'Theme.cpp',
+                                  'widget/Widget.cpp'])
+
+Return('obj')

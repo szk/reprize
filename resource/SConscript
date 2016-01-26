@@ -1,0 +1,24 @@
+Import('re_env')
+obj = re_env.SharedObject(source=['Actor.cpp',
+                                  'Brush.cpp',
+                                  'DirEntry.cpp',
+                                  'Font.cpp',
+                                  'GeomGlyph.cpp',
+                                  'Resource.cpp',
+                                  'VFS.cpp',
+                                  'Skeleton.cpp',
+				  'scene/Trigger.cpp',
+                                  'Entity.cpp',
+                                  'PlaneGlyph.cpp',
+                                  'XML.cpp',
+                                  'loader/ALSndLoader.cpp',
+                                  'loader/GLTexLoader.cpp',
+                                  'loader/GeomLoader.cpp',
+                                  'loader/OBJ.cpp',
+                                  'loader/VarLoader.cpp',
+                                  'loader/GLX11FontLoader.cpp',
+                                  'loader/ScrptLoader.cpp',
+                                  'reader/POSIXFSReader.cpp',
+                                  'reader/zlibReader.cpp'])
+
+Return('obj')

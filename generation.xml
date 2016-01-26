@@ -1,0 +1,24 @@
+<reprize>
+  <Generator>
+    <Lsystem name="agu"/>
+    <Skydome name="boge" type="geometry"/>
+    <Skydome name="boge" type="texture"/>
+    <Terrain name="" type="geometry" />
+    <Terrain name="" type="texture" />
+    or
+    <Geometry name="blob0" hoge="" script="Terrain"/>
+    <Texture name="poro1" script="Terrain" />
+    <Geometry name="blob2" hoge="" script="Skydome"/>
+    <Texture name="poro3" script="Skydome" />
+    <Topology name="test1" script="hoge"/>
+    <Metric name="test2" script="TerrainScript"/>
+    <Sound name="boge" script="boge" />
+  </Generator>
+  <Space/>
+  <Material>
+    <Shader />
+    <Texture ref=\"/gen.xml/Generator/Texture/hoge"/>
+    <Texture ref=\"Generator/poro"/>
+  </Material>
+  <Model name="" geometry="Generator/blob" material=""/>
+</reprize>

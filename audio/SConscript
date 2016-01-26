@@ -1,0 +1,16 @@
+Import('re_env')
+
+src_list = ['Audio.cpp']
+
+conf = Configure(re_env)
+if conf.CheckLibWithHeader('openal', ['AL/al.h', "AL/alc.h", "AL/alext.h"],
+                           'c++', 'alcGetString(0, ALC_DEVICE_SPECIFIER);'):
+    pass
+#     conf.env.Append(CXXFLAGS='-DOPENAL')
+#     src_list.append(['ALUNIXAcoustic.cpp'])
+
+re_env = conf.Finish()
+
+obj = re_env.SharedObject(source=[src_list])
+
+Return('obj')

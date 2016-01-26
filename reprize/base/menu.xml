@@ -1,0 +1,12 @@
+<?xml version="1.0" ?>
+<Reprize version="0.0">
+  <Menu theme="/System/Theme">
+    <Thumb title="from xml">
+      <Frame>
+        <Button cmd="/Scene/World/Globe_1#0/goneg">Go Negative</Button>
+        <Button cmd="/Scene/World/Globe_1#0/gopos">Go Positive</Button>
+        <Button cmd="/Scene/World/Globe_1#0/goab">Go Above</Button>
+      </Frame>
+    </Thumb>
+  </Menu>
+</Reprize>

@@ -1,0 +1,8 @@
+Import('re_env')
+obj = re_env.SharedObject(source=['SphereTree.cpp',
+                                  'Physics.cpp',
+                                  'Ray.cpp',
+                                  'Sphere.cpp',
+                                  'Tris.cpp'])
+
+Return('obj')

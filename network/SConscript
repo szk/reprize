@@ -1,0 +1,7 @@
+Import('re_env')
+obj = re_env.SharedObject(source=['BSDSocket.cpp',
+                                  'ConnTCP.cpp',
+                                  'ConnUDP.cpp',
+                                  'Network.cpp'])
+
+Return('obj')

@@ -1,0 +1,41 @@
+import os
+Import('re_env', 'objs')
+
+core = re_env.SharedObject(source=['Core.cpp'])
+demo = re_env.SharedObject(source=['Demo.cpp'])
+
+
+a = re_env.Library(target = 'reprize',
+                   source = objs + core,
+                   LIBS = ['X11',
+                           'm',
+                           'freetype',
+                           'z',
+                           'png',
+                           'pthread'] + re_env.get('LIBS', []))
+
+a_prog = re_env.Program(target = 'demo_a',
+                        source = objs + core + demo,
+                        LIBS = ['X11',
+                                'm',
+                                'freetype',
+                                'z',
+                                'png',
+                                'pthread'] + re_env.get('LIBS', []),
+                        CPPPATH = ['../include'],
+                        LIBPATH = ['.'])
+
+so = re_env.SharedLibrary(target ='reprize',
+                          source = objs + core,
+                          LIBS = ['m',
+                                  'freetype',
+                                  'z',
+                                  'png',
+                                  'pthread'] + re_env.get('LIBS', []))
+
+prog = re_env.Program(target = 'demo_so',
+                      source = demo,
+                      RPATH = Dir('.').abspath,
+                      CPPPATH = ['../include'],
+                      LIBPATH = ['.'],
+                      LIBS = ['reprize'])

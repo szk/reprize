@@ -1,0 +1,4 @@
+Import('re_env')
+obj = re_env.SharedObject(source=['Session.cpp'])
+
+Return('obj')
